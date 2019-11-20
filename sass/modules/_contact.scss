@@ -1,0 +1,11 @@
+#contact {
+    height: 580px;
+
+    h3 {
+        @include title;
+        font-size: 8rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        color: $black;
+    }
+}

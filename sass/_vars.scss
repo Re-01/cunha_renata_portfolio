@@ -1,0 +1,31 @@
+// COLORS
+$white: #f9f9f9;
+$gold: #be986f;
+$black:#000;
+$red: #E0040B;
+$orange: #c03239;
+
+// TEXT
+
+@mixin title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 6rem;
+}
+
+@mixin quote {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+@mixin text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.5rem;
+}
+
+// TRANSITIONS
+$main-transition: all 0.3s ease;
+
+// SPACING
+$margin: 5rem;

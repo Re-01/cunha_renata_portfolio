@@ -1,0 +1,21 @@
+.header {
+  background-image: url("../images/header_bg.jpg"); }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  /* inehrit from Body */ }
+
+.hidden {
+  display: none; }
+
+html {
+  font-size: 10px; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  background-color: #f9f9f9; }

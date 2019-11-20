@@ -1,0 +1,44 @@
+@import '_vars';
+@import 'modules/_header';
+@import 'modules/_about_me';
+@import 'modules/_portfolio';
+@import 'modules/_contact';
+@import 'modules/_footer';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  /* inehrit from Body */
+}
+
+.hidden {
+  display: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  max-width: 1400px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: $white;
+}
+
+.quote {
+  background-color: #efefef;
+  border-radius: 8px;
+  margin-bottom: $margin;
+}
+.quote-text {
+  @include quote;
+  text-align: center;
+}
+.quotes {
+  font-family: 'Catamaran', sans-serif;
+  color: $orange;
+  font-size: 8rem;
+}

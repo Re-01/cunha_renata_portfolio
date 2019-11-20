@@ -1,0 +1,126 @@
+header {
+  height: 580px;
+  background-image: url('../images/header_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  #logo {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    max-width: 100px;
+  }
+
+  // Nav Styles
+
+  #main-nav a {
+    text-decoration: none;
+    color: $black;
+    transition: $main-transition;
+  }
+
+  #main-nav a:hover {
+    color: $white;
+    padding-left: 5px;
+  }
+
+  #menuToggle {
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+
+  .hamburger {
+    display: block;
+    width: 50px;
+    height: 4px;
+    margin-bottom: 10px;
+    position: relative;
+    background: $white;
+    border-radius: 1px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  .line2 {
+    width: 50px;
+  }
+
+  .hamburger:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  .hamburger:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  #menuToggle input:checked~span:nth-last-child(3) {
+    transform: rotate(45deg) translate(-6px, -6px);
+  }
+
+  #menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(-3px, 6px);
+  }
+
+  #menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: transparentize($white, 0.4);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  .icon {
+    width: 13%;
+    padding-left: 50%;
+    transition: all 0.3s ease;
+  }
+
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+    border-bottom: 1px solid black;
+  }
+
+  #menuToggle input:checked~ul {
+    transform: none;
+  }
+
+  .header-text {
+    @include text;
+    text-align: center;
+    padding-top: 190px;
+    padding-left: 40px;
+    width: 550px;
+    color: $white;
+  }
+}
