@@ -23,11 +23,15 @@ html {
 }
 
 body {
-  max-width: 1400px;
+  width: 100%;
   font-family: 'Open Sans', sans-serif;
   background-color: $white;
 }
 
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
 .quote {
   background-color: #efefef;
   border-radius: 8px;
@@ -41,4 +45,20 @@ body {
   font-family: 'Catamaran', sans-serif;
   color: $orange;
   font-size: 8rem;
+}
+
+#video {
+  padding: 5rem;
+
+  h3 {
+    @include title;
+    margin-bottom: 2rem;
+  }
+
+  video {
+    width: 50%;
+    margin-left: 23%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }

@@ -4,6 +4,12 @@
         background-image: url('../images/contact_bg.jpg');
         background-repeat: no-repeat;
         background-position: center;
+        background-size: cover;
+
+        @media only screen and (min-width: 1030px)  {
+            height: none;
+            background-image: url('../images/contact_bg@2x.jpg');
+          }
     }
 
     .content {
@@ -27,5 +33,10 @@
         width: 418px;
         color: $white;
         text-shadow: 0px 2px 3px rgba(150, 150, 150, 0.71);
+
+        @media only screen and (min-width: 1030px)  {
+           padding-left: 870px;
+           font-size: 2.5rem;
+        }
     }
 }
