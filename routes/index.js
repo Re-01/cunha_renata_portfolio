@@ -13,7 +13,7 @@ router.get('/', function (req, res, next) {
   sql.query(query, (err, result) => {
     if (err) { console.log(err); } // something done broke!
 
-    console.log(result); // 
+    console.log(result); 
 
     res.render('index', { projects: result });
   })
