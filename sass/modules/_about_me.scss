@@ -9,13 +9,19 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        margin-bottom: $margin;
+        margin-bottom: $margin + 6rem;
     }
 
     .about-me-text {
-        @include text;
-        font-size: 1.5rem;
-        margin-bottom: $margin;
+
+        p {
+            @include text;
+            margin-bottom: $margin;
+
+            @media only screen and (max-width: 1024px) {
+                font-size: 1.5rem;
+            }
+        }
     }
     
 }

@@ -36,15 +36,37 @@ body {
   background-color: #efefef;
   border-radius: 8px;
   margin-bottom: $margin;
-}
-.quote-text {
-  @include quote;
-  text-align: center;
-}
-.quotes {
-  font-family: 'Catamaran', sans-serif;
-  color: $orange;
-  font-size: 8rem;
+  padding: 3rem;
+  position:relative;
+
+  .quote-text {
+    @include quote;
+    text-align: center;
+  }
+
+  .quotes {
+    font-family: 'Catamaran', sans-serif;
+    color: $orange;
+    font-size: 7rem;
+    position: absolute;
+
+    &:nth-child(1) {
+      top: 0;
+      left: 0;
+    }
+    &:nth-child(2) {
+      bottom: 0;
+      right: 260px;
+    }
+  }
+
+  .author {
+    font-size: 1.5rem;
+    display:block;
+    margin-top: 1rem;
+    color: grey;
+    text-transform: uppercase;
+  }
 }
 
 #video {

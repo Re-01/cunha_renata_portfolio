@@ -21,19 +21,23 @@
       </div>
     </nav>
     <div class="header-text">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis porttitor orci, et maximus felis commodo
-        nec. Donec quis condimentum quam, ut efficitur lectus. Ut tempus maximus aliquet. Curabitur maximus purus ac risus
-        varius, ut laoreet ex mollis. Donec hendrerit mollis posuere. Nullam sit amet urna eget nisl dictum varius
-        convallis eget purus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+      <p>I am Brazilian and I came to Canada in 2018. 
+        I also hold a B.A. in Social Communication, Journalism and an MBA in Corporate Communication. 
+        For years, I worked as a reporter, producing and conducting interviews for television programs, 
+        newspapers, as well as content for corporate television.</p>
     </div>
   </header>
   <section id="about-me">
     <h3>Once upon a time...</h3>
     <div class="about-me-text">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis porttitor orci, et maximus felis commodo
-        nec. Donec quis condimentum quam, ut efficitur lectus. Ut tempus maximus aliquet. Curabitur maximus purus ac risus
-        varius, ut laoreet ex mollis. Donec hendrerit mollis posuere. Nullam sit amet urna eget nisl dictum varius
-        convallis eget purus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+      <p>... a Professional Journalist with a lot of experience in the advertising industry, 
+        agency interface, customer services and client relationship in Brazil, decides to 
+        improve her knowledge in every aspect of Digital Communication through a Diploma Program 
+        at Fanshawe College in Canada. That's me! and by doing so I will be able to apply all the knowledge 
+        aquired at this program and before into a new career opportunity. 
+        It wasn’t easy, but I am a dedicated and persistent professional who strives to excel 
+        in each and every project I work in.
+      </p>
     </div>
     <div class="icons">
       <i class="fas fa-globe-americas fa-7x"></i>
@@ -46,8 +50,13 @@
     <div class="quote">
       <p class="quote-text">
       <span class="quotes">&ldquo;</span>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Renata is an incredible professional. Her enthusiasm and dedication accompanies her 
+        in everything she intends to do. She has a strategy vision, planning capacity and 
+        Portuguese spotless writing. She is an excellent leader, motivating and always willing 
+        to help. I learned a lot during the time we worked together, mainly because she is 
+        flexible to solve problems and persistent to obtain the best results.
       <span class="quotes">&rdquo;</span>
+      <span class="author">Bruna Scoralick Queiroz - Marketing Strategy Specialist</span>
       </p>
     </div>
   </section>
@@ -55,20 +64,28 @@
     <div class="portfolio-header">
       <h3>Portfolio</h3>
       <div class="portfolio-header-txt">
-        <p>My job require constant attention with deadlines and quality control of production. 
-          During my graduation in Interactive Media Design, I worked in many awesome assignments,
-          I choose some of them to share below. 
+        <p>My job requires constant attention to deadlines and quality control of production. 
+          During my education in Interactive Media Design, I worked on many awesome assignments, 
+          I chose some of them to share below.
         </p>
       </div>
     </div>
     <div class="content">
       <div class="projects">
+      {{#each projects}}
+      <div class="project">
+        <h2 class="title">{{ proj_title }}</h2>
+        <img src="/images/{{ proj_img_sm }}" alt="{{ proj_title }}">
+        <p>{{ proj_summary }}</p>
+      </div>
+      {{/each}}
       </div>
       <div class="quote">
         <p class="quote-text">
         <span class="quotes">&ldquo;</span>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Renata is a dedicated professional and a very creative person. Her ideas bring dynamic to the Elas TV Show! It was a lot of work but, a big project that worked and we are very proud of that.
         <span class="quotes">&rdquo;</span>
+        <span class="author">Renata Lima - Communication Consultant</span>
         </p>
       </div>
     </div>
