@@ -6,7 +6,7 @@ const sql = require('../utils/sql');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Renata Cunha'});
+  //res.render('index', { title: 'Renata Cunha'});
 
   let query = `SELECT * FROM tbl_projects`;
 
@@ -15,7 +15,7 @@ router.get('/', function (req, res, next) {
 
     console.log(result); 
 
-    res.render('index', { projects: result });
+    res.render('index', { projects: result, title: 'Renata Cunha' });
   })
 });
 

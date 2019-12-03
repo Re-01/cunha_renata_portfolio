@@ -39,4 +39,62 @@
            font-size: 2.5rem;
         }
     }
+
+    .projects {
+        padding: 5rem;
+        display: flex;
+        align-items: baseline;
+        margin-top: $margin;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+
+        @media only screen and (min-width: 1030px) {
+        }
+
+        .project {
+            cursor: pointer;
+            background-color: #efefef;
+            border-radius: 8px;
+            max-width: 400px;
+            padding: 3rem;
+            margin-bottom: 5rem;
+            transition: all 0.4s ease;
+
+            &:hover, &:active {
+                background-color: darken(#efefef, 5%);
+                -webkit-box-shadow: 2px 2px 26px -1px rgba(0,0,0,0.29);
+                -moz-box-shadow: 2px 2px 26px -1px rgba(0,0,0,0.29);
+                box-shadow: 2px 2px 26px -1px rgba(0,0,0,0.29);
+            }
+
+
+            h2 {
+                text-align: center;
+                @include title;
+                line-height: 1.2;
+            }
+
+            .img {
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                float: left;
+                overflow: hidden;
+                margin-top: 1rem;
+                margin-right: 2rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+            .text {
+                @include text;
+                font-size: 1.5rem;
+                margin-top: 1rem;
+                float: right;
+                width: 200px;
+            }
+        }
+    }
 }

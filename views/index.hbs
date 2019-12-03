@@ -9,13 +9,13 @@
         <span class="hamburger line2"></span>
         <ul id="menu">
           <li>
-            <a id="about" class="nav-btn" href="#about-us">About Me</a>
+            <a id="about" class="nav-btn" href="#about-me">About Me</a>
           </li>
           <li>
-            <a id="team" class="nav-btn" href="#meet-team">Portfolio</a>
+            <a id="projects" class="nav-btn" href="#portfolio">Portfolio</a>
           </li>
           <li>
-            <a id="contact" class="nav-btn" href="#">Contact</a>
+            <a id="contact" class="nav-btn" href="#contact-me">Contact</a>
           </li>
         </ul>
       </div>
@@ -73,13 +73,15 @@
     <div class="content">
       <div class="projects">
       {{#each projects}}
-      <div class="project">
-        <h2 class="title">{{ proj_title }}</h2>
-        <a href="">
-          <img src="/images/{{ proj_img_sm }}" alt="{{ proj_title }}">
-        </a>
-        <p>{{ proj_summary }}</p>
-      </div>
+        <div class="project" data-target="{{ proj_id }}">
+          <h2>{{ proj_title }}</h2>
+          <div class="img">
+              <img src="/images/{{ proj_img_sm }}" alt="{{ proj_title }}">
+          </div>
+          <div class="text">
+            <p>{{ proj_summary }}</p>
+          </div>
+        </div>
       {{/each}}
       </div>
       <div class="quote">
@@ -92,7 +94,13 @@
       </div>
     </div>
   </section>
-  <section id="contact">
+  <section id="video">
+    <h3>Demo Reel</h3>
+    <div class="quote">
+      <video src="/video/cunha_renata_morph_cd4.mp4" type="video/mp4" controls></video>
+    </div>
+  </section>
+  <section id="contact-me">
     <h3>Give me a shout <i class="fas fa-bullhorn"></i></h3>
       <form>  
       <div class="contentform">
@@ -125,12 +133,6 @@
       </div>
     <button type="submit" class="btn-contact">Send</button>   
   </form> 
-  </section>
-  <section id="video">
-    <h3>Demo Reel</h3>
-    <div class="quote">
-      <video src="/video/cunha_renata_morph_cd4.mp4" type="video/mp4" controls></video>
-    </div>
   </section>
   <footer>
     <img src="/images/logo_white.svg" alt="logo" id="logo">
