@@ -53,7 +53,6 @@
         }
 
         .project {
-            cursor: pointer;
             background-color: #efefef;
             border-radius: 8px;
             max-width: 400px;
@@ -96,5 +95,50 @@
                 width: 200px;
             }
         }
+    }
+    .lightbox {
+        display: none;
+        // opacity: 0;
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.85);
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        overflow-y: scroll;
+
+        i {
+            position: absolute;
+            right:10%;
+            top: 5%;
+            cursor: pointer;
+        }
+
+        .lightbox-content {
+            padding: 5rem;
+        }
+
+        .lightbox-img, .lightbox-title {
+            margin-bottom: 3rem;
+        }
+
+        .lightbox-title, .lightbox-text, i {
+            color: $white;
+            
+        }
+        .lightbox-text {
+            @include text;
+            padding: 2rem;
+        }
+    }
+    .show-lightbox {
+        display: block;
+        // opacity: 1;
     }
 }

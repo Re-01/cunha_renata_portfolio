@@ -13,9 +13,20 @@ router.get('/', function (req, res, next) {
   sql.query(query, (err, result) => {
     if (err) { console.log(err); } // something done broke!
 
-    console.log(result); 
-
     res.render('index', { projects: result, title: 'Renata Cunha' });
+  })
+});
+
+router.get('/project/:target', (req, res) => {
+  //here is where we set up the query
+  let query = `SELECT * FROM tbl_projects WHERE proj_id="${req.params.target}"`;
+
+  sql.query(query, (err, result) => {
+    if (err) { console.log(err); } // something done broke!
+
+    console.log(result); // this should be the database row
+
+    res.json(result[0]); // send that row back to the calling function
   })
 });
 
