@@ -7,6 +7,8 @@ Professional Journalist with large experience in Communication field in Brazilia
 
 Currently looking forward to improving knowledge in every aspect of Digital Communication through a Diploma Program at Fanshawe College and being able to apply it in a new career opportunity.
 
+You also can see on www.renatacunha.co
+
 # Built with
 HTML5
 
