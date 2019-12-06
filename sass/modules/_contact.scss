@@ -45,13 +45,14 @@
     }
 
     input {
-    border-radius: 0px 5px 5px 0px;
-    border: 1px solid #eee;
-    margin-bottom: 15px;
-    width: 75%;
-    height: 40px;
-    float: left;
-    padding: 0px 15px;
+        border-radius: 0px 5px 5px 0px;
+        border: 1px solid #eee;
+        margin-bottom: 15px;
+        width: 75%;
+        height: 40px;
+        float: left;
+        padding: 0px 15px;
+        font-size: 1.5rem;
     }
 
     a {
@@ -59,13 +60,14 @@
     }
 
     textarea {
-    border-radius: 0px 5px 5px 0px;
-    border: 1px solid #EEE;
-    margin: 0;
-    width: 75%;
-    height: 130px; 
-    float: left;
-    padding: 0px 15px;
+        border-radius: 0px 5px 5px 0px;
+        border: 1px solid #EEE;
+        margin: 0;
+        width: 75%;
+        height: 130px; 
+        float: left;
+        padding: 0px 15px;
+        font-size: 1.5rem;
     }
 
     .form-group {

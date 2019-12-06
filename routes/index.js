@@ -1,8 +1,39 @@
 var express = require('express');
 var router = express.Router();
 var path = require('path');
+var auth = require('../config/mailcreds');
+var mailer = require('nodemailer');
 
 const sql = require('../utils/sql');
+
+const transporter = mailer.createTransport({
+	service: 'gmail',
+	auth: {
+		user: auth.user,
+		pass: auth.pass
+	}
+});
+
+router.post('/mail', (req, res) => {
+
+  const mailOptions = {
+    from: req.body.name,
+    to: auth.user,
+    replyTo: req.body.email,
+    subject: `From portfolio site: Subject = ${req.body.subject || 'none'}`,
+    text: req.body.message
+  };
+
+  transporter.sendMail(mailOptions, function (err, info) {
+    if (err) {
+      console.log("failed... ", err);
+      res.json(err);
+    } else {
+      console.log("success! ", info);
+      res.json(info);
+    }
+  });
+})
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
