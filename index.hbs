@@ -1,0 +1,149 @@
+<div class="container">
+  <header>
+    <img src="/images/logo_white.svg" alt="logo" id="logo">
+    <h2 class="hidden">Nav Header</h2>
+    <nav id="main-nav">
+      <h2 class="hidden">Main Navigation</h2>
+      <div id="menuToggle">
+        <input type="checkbox" /> <span class="hamburger line1"></span>
+        <span class="hamburger line2"></span>
+        <ul id="menu">
+          <li>
+            <a id="about" class="nav-btn" href="#about-me">About Me</a>
+          </li>
+          <li>
+            <a id="projects" class="nav-btn" href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a id="contact" class="nav-btn" href="#contact-me">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="header-text">
+      <p>I am Brazilian and I came to Canada in 2018.</p> 
+        <p>I also hold a B.A. in Social Communication, Journalism and a MBA in Corporate Communication. 
+        For years, I worked as a reporter, producing and conducting interviews for television programs, 
+        newspapers, as well as content for corporate television.</p>
+        <p>Welcome to my Portfolio Website!</p>
+    </div>
+  </header>
+  <section id="about-me">
+    <h3>Once upon a time...</h3>
+    <div class="about-me-text">
+      <p>... a Professional Journalist with experience in the advertising industry, 
+        agency interface, customer services and client relationship in Brazil, decides to 
+        improve her knowledge in every aspect of Digital Communication through a Diploma Program 
+        at Fanshawe College in Canada. That's me! and by doing so I will be able to apply all the knowledge 
+        aquired at this program and before into a new career opportunity. 
+        It wasn’t easy, but I am a dedicated and persistent professional who strives to excel 
+        in each and every project I work in.
+      </p>
+    </div>
+    <div class="icons">
+      <i class="fas fa-globe-americas fa-7x"></i>
+      <i class="fas fa-microphone fa-7x"></i>
+      <i class="fas fa-newspaper fa-7x"></i>
+      <i class="fas fa-tv fa-7x"></i>
+      <i class="fas fa-user-graduate fa-7x"></i>
+      <i class="fas fa-wine-glass-alt fa-7x"></i>
+    </div>
+    <div class="quote">
+      <p class="quote-text">
+      <span class="quotes">&ldquo;</span>
+        Renata is an incredible professional. Her enthusiasm and dedication accompanies her 
+        in everything she intends to do. She has a strategy vision, planning capacity and 
+        Portuguese spotless writing. She is an excellent leader, motivating and always willing 
+        to help. I learned a lot during the time we worked together, mainly because she is 
+        flexible to solve problems and persistent to obtain the best results.
+      <span class="quotes">&rdquo;</span>
+      <span class="author">Bruna Scoralick Queiroz - Marketing Strategy Specialist</span>
+      </p>
+    </div>
+  </section>
+  <section id="portfolio">
+    <div class="portfolio-header">
+      <h3>Portfolio</h3>
+      <div class="portfolio-header-txt">
+        <p>My job requires constant attention to deadlines and quality control of production. 
+          During my carrer in Brazil like a Communication Specialist and during my education in Interactive Media Design in Canada, I worked on many awesome jobs and assignments, 
+          I chose some of them to share below.
+        </p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="projects">
+      {{#each projects}}
+        <div class="project" data-target="{{ proj_id }}">
+          <h2>{{ proj_title }}</h2>
+          <div class="img">
+              <img src="/images/{{ proj_img_sm }}" alt="{{ proj_title }}">
+          </div>
+          <div class="text">
+            <p>{{ proj_summary }}</p>
+          </div>
+        </div>
+      {{/each}}
+      </div>
+      <div class="quote">
+        <p class="quote-text">
+        <span class="quotes">&ldquo;</span>
+          Renata is a dedicated professional and a very creative person. Her ideas bring dynamic to the Elas TV Show! It was a lot of work but, a big project that worked and we are very proud of that.
+        <span class="quotes">&rdquo;</span>
+        <span class="author">Renata Lima - Communication Consultant</span>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="video">
+    <h3>Demo Reel</h3>
+    <div class="quote">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/qjeyAciyR3Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </div>
+  </section>
+  <section id="contact-me">
+    <h3>Give me a shout <i class="fas fa-bullhorn"></i></h3>
+      <form action="">  
+      <div class="contentform">
+          <div id="sendmessage"> Yuhuu!!! Your message has been sent successfully. Thank you. </div>
+          <div class="form-group">
+            <p>Full Name</p>
+            <span class="icon-case"><i class="fa fa-male"></i></span>
+                <input type="text" name="name" id="name" data-rule="required"/>
+          <div class="validation"></div>
+          <div class="form-group">
+            <p>E-mail</p>    
+            <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+            <input type="email" name="email" id="email" data-rule="email" />
+            <div class="validation"></div>
+          </div>  
+          <div class="form-group">
+          <p>Subject</p>   
+          <span class="icon-case"><i class="fa fa-comment-o"></i></span>
+              <input type="text" name="subject" id="subject" data-rule="required" />
+              <div class="validation"></div>
+          </div>
+      
+          <div class="form-group">
+          <p>Message</p>
+          <span class="icon-case"><i class="fa fa-comments-o"></i></span>
+              <textarea name="message" rows="14" data-rule="required"></textarea>
+              <div class="validation"></div>
+          </div> 
+        </div> 
+      </div>
+    <button type="submit" class="btn-contact">Send</button>   
+  </form> 
+  </section>
+  <div class="lightbox">
+    <button id="close-btn"><i class="far fa-times-circle fa-5x"></i></button>
+    <div class="lightbox-content">
+      <h2 class="lightbox-title"></h2>
+      <img class="lightbox-img" src="" alt="">
+      <p class="lightbox-text"></p>
+    </div>
+  </div>
+  <footer>
+    <img src="/images/logo_white.svg" alt="logo" id="logo">
+    <p>&copy; Renata Cunha</p>
+  </footer>
+</div>
